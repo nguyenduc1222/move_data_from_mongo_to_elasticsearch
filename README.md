@@ -4,6 +4,7 @@
 # Hướng dẫn cài Elasticsearch - UBUNTU 18 LTS  
 
 1. Cài JAVA  
+```
 sudo apt-get update  
 sudo apt install apt-transport-https  
 sudo apt install openjdk-8-jdk  
@@ -14,8 +15,10 @@ sudo nano /etc/environment
 add 'JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre" '  
 source /etc/environment  
 echo $JAVA_HOME  
+```
 
 2. Cài ELK  
+```
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -  
 sudo apt-get install apt-transport-https  
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list  
@@ -25,11 +28,11 @@ sudo /bin/systemctl enable elasticsearch.service
 sudo systemctl start elasticsearch  
 sudo systemctl stop elasticsearch  
 sudo systemctl status elasticsearch  
-
+```
 -----------------------------------------------------------------------  
 # Move dữ liệu lớn từ mongodb sang elk  
-
-wget https://github.com/.../v0.5.2/transporter-0.5.2-linux-amd64  
+```  
+wget https://github.com/compose/transporter/releases/download/v0.5.2/transporter-0.5.2-linux-amd64?fbclid=IwAR2mRl_qBqeH5m8EkVPhYZcqMXlUZDBqGoMQI08qupljSXKl2pd0FQTPq-o
 sudo mv transporter-*-linux-amd64 /usr/local/bin/transporter  
 chmod +x /usr/local/bin/transporter  
 transporter init mongodb elasticsearch  
@@ -41,11 +44,13 @@ Sửa file pipeline.js
 ở dòng cuối  
 t.Source("source", source, "/.*/").Transform(goja({"filename": "transform.js"})).Save("sink", sink, "/.*/")  
 run  
+```
 -------------------------------------------------------------------------  
 #Cho phép request từ xa  
-  
+```  
 sudo nano /etc/elasticsearch/elasticsearch.yml  
 /etc/elasticsearch/elasticsearch.yml  
 network.host: 0.0.0.0  
 cluster.name: myCluster1  
 node.name: "myNode1"  
+```
