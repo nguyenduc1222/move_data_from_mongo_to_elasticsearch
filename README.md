@@ -31,7 +31,7 @@ sudo systemctl status elasticsearch
 -----------------------------------------------------------------------  
 # Move dữ liệu lớn từ mongodb sang elk  
 ```  
-wget https://github.com/compose/transporter/releases/download/v0.5.2/transporter-0.5.2-linux-amd64?fbclid=IwAR2mRl_qBqeH5m8EkVPhYZcqMXlUZDBqGoMQI08qupljSXKl2pd0FQTPq-o
+wget https://github.com/compose/transporter/releases/download/v0.5.2/transporter-0.5.2-linux-amd64
 sudo mv transporter-*-linux-amd64 /usr/local/bin/transporter  
 chmod +x /usr/local/bin/transporter  
 transporter init mongodb elasticsearch  
