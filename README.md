@@ -42,6 +42,10 @@ nano tranform.js
 Sửa file pipeline.js  
 ở dòng cuối  
 t.Source("source", source, "/.*/").Transform(goja({"filename": "transform.js"})).Save("sink", sink, "/.*/")  
+
+Hoặc chỉ thêm 1 bảng cb_instances bằng cách
+t.Source("source", source, "/^cb_instances$").Save("sink", sink, "/.*/")
+
 run  
 transporter run pipeline.js   
 ```
