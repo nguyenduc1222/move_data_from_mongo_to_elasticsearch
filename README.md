@@ -1,7 +1,7 @@
 ﻿# move_data_from_mongo_to_elasticsearch  
 # move_data_from_mongo_to_elasticsearch  
 --------------------------------------------------------------------  
-#Hướng dẫn cài Elasticsearch - UBUNTU 18 LTS  
+# Hướng dẫn cài Elasticsearch - UBUNTU 18 LTS  
 
 1. Cài JAVA  
 sudo apt-get update  
@@ -12,7 +12,6 @@ echo $JAVA_HOME
 sudo update-alternatives --config java  
 sudo nano /etc/environment  
 add 'JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre" '  
-
 source /etc/environment  
 echo $JAVA_HOME  
 
@@ -28,7 +27,7 @@ sudo systemctl stop elasticsearch
 sudo systemctl status elasticsearch  
 
 -----------------------------------------------------------------------  
-#Move dữ liệu lớn từ mongodb sang elk  
+# Move dữ liệu lớn từ mongodb sang elk  
 
 wget https://github.com/.../v0.5.2/transporter-0.5.2-linux-amd64  
 sudo mv transporter-*-linux-amd64 /usr/local/bin/transporter  
@@ -41,7 +40,7 @@ nano tranform.js
 Sửa file pipeline.js  
 ở dòng cuối  
 t.Source("source", source, "/.*/").Transform(goja({"filename": "transform.js"})).Save("sink", sink, "/.*/")  
-Run  
+run  
 -------------------------------------------------------------------------  
 #Cho phép request từ xa  
   
