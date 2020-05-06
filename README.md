@@ -43,6 +43,7 @@ Sửa file pipeline.js
 ở dòng cuối  
 t.Source("source", source, "/.*/").Transform(goja({"filename": "transform.js"})).Save("sink", sink, "/.*/")  
 run  
+transporter run pipeline.js   
 ```
 -------------------------------------------------------------------------  
 # Cho phép request từ xa  
