@@ -46,7 +46,7 @@ t.Source("source", source, "/.*/").Transform(goja({"filename": "transform.js"}))
 run  
 ```
 -------------------------------------------------------------------------  
-#Cho phép request từ xa  
+# Cho phép request từ xa  
 ```  
 sudo nano /etc/elasticsearch/elasticsearch.yml  
 /etc/elasticsearch/elasticsearch.yml  
