@@ -1,5 +1,4 @@
 ﻿# move_data_from_mongo_to_elasticsearch  
-# move_data_from_mongo_to_elasticsearch  
 --------------------------------------------------------------------  
 # Hướng dẫn cài Elasticsearch - UBUNTU 18 LTS  
 
